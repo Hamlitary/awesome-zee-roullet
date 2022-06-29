@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Wheel } from 'react-custom-roulette';
-import { makeStyles, Modal } from "@material-ui/core";
+import { Modal } from "@material-ui/core";
 
 const data = [
   { option: '0' },
@@ -28,22 +28,24 @@ const Wheeltest = () => {
     const newPrizeNumber = Math.floor(Math.random() * data.length)
     setPrizeNumber(newPrizeNumber)
     setMustSpin(true)
-  }
+  };
 
   return (
     <>
-      <Wheel
-        mustStartSpinning={mustSpin}
-        prizeNumber={prizeNumber}
-        data={data}
-        backgroundColors={["#5500FF", "#ffffff"]}
-        textColors={["#ffffff", "#5500FF"]}
-        onStopSpinning={() => {
-          setMustSpin(false);
-          handleOpen();
-        }}
-      />
-      <button onClick={handleSpinClick}>SPIN</button>
+      <div>
+        <Wheel
+          mustStartSpinning={mustSpin}
+          prizeNumber={prizeNumber}
+          data={data}
+          backgroundColors={["#5500FF", "#ffffff"]}
+          textColors={["#ffffff", "#5500FF"]}
+          onStopSpinning={() => {
+            setMustSpin(false);
+            handleOpen();
+          }}
+        />
+        <button onClick={handleSpinClick}>SPIN</button>
+      </div>
       <Modal open={open} onClose={handleClose} className="Ccelebnodal">
         <div className="Cceleb">
           <h5>당첨을 축하합니다!</h5>
