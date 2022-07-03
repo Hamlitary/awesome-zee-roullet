@@ -11,27 +11,31 @@ const data = [
   { option: '5' },
 ]
 
-const WheelRoulette = (
+const WheelRoulette = ({
   setModalOpen,
   setMustSpinOption,
   mustSpinOption,
   prizeNumber,
-  setSelectedData, 
-) => {
+  setSelectedData,
+}) => {
   const [mustSpin, setMustSpin] = useState(false);
   useEffect(() => {
     mustSpinOption? setMustSpin(true) : setMustSpin(false);
   },[mustSpinOption]);
 
-  console.log(prizeNumber);
   return (
     <>
       <Wheel
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
-        backgroundColors={["#5500FF", "#ffffff"]}
-        textColors={["#ffffff", "#5500FF"]}
+        backgroundColors={["#FF6C6C", "#FFFF8F"]}
+        textColors={["#ffffff", "#980000"]}
+        outerBorderColor="#FFFFFF"
+        outerBorderWidth="6"
+        radiusLineColor="#FFFFFF"
+        spinDuration="0.3"
+        fontSize="30"
         onStopSpinning={() => {
           setMustSpinOption(false);
           setModalOpen(true);
