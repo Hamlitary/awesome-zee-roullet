@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { Wheel } from 'react-custom-roulette';
 
 const data = [
-  { option: '0' },
-  { option: '1' },
-  { option: '2' },
-  { option: '3' },
-  { option: '4' },
-  { option: '5' },
+  { option: '1번 스티커' },
+  { option: '엽서 1장' },
+  { option: '2번 스티커' },
+  { option: '3번 스티커' },
+  { option: '4번 스티커' },
+  { option: '엽서 2장' },
+  { option: '5번 스티커' },
+  { option: '6번 스티커' },
 ]
 
 const WheelRoulette = ({
@@ -29,13 +31,13 @@ const WheelRoulette = ({
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
-        backgroundColors={["#FF6C6C", "#FFFF8F"]}
+        backgroundColors={["#FF6C6C", "#FFFFFF"]}
         textColors={["#ffffff", "#980000"]}
-        outerBorderColor="#FFFFFF"
-        outerBorderWidth="6"
-        radiusLineColor="#FFFFFF"
+        outerBorderColor="#FFE45F"
+        outerBorderWidth="10"
+        radiusLineColor="#FFE45F"
         spinDuration="0.3"
-        fontSize="30"
+        fontSize="20"
         onStopSpinning={() => {
           setMustSpinOption(false);
           setModalOpen(true);
