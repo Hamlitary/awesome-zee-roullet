@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cfc0aff2.chunk.css",
+    "main.js": "/static/js/main.6d7f62ee.chunk.js",
+    "main.js.map": "/static/js/main.6d7f62ee.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b30954ad.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b30954ad.js.map",
+    "static/js/2.a66e4bea.chunk.js": "/static/js/2.a66e4bea.chunk.js",
+    "static/js/2.a66e4bea.chunk.js.map": "/static/js/2.a66e4bea.chunk.js.map",
+    "static/js/3.0c2199aa.chunk.js": "/static/js/3.0c2199aa.chunk.js",
+    "static/js/3.0c2199aa.chunk.js.map": "/static/js/3.0c2199aa.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.cfc0aff2.chunk.css.map": "/static/css/main.cfc0aff2.chunk.css.map",
+    "static/js/2.a66e4bea.chunk.js.LICENSE.txt": "/static/js/2.a66e4bea.chunk.js.LICENSE.txt",
+    "static/media/Dialog.d68ac5b4.svg": "/static/media/Dialog.d68ac5b4.svg",
+    "static/media/HappyZee.15276407.svg": "/static/media/HappyZee.15276407.svg",
+    "static/media/App.css": "/static/media/Jua-Regular.bb8909a4.ttf",
+    "static/media/clicked.37d4fd3e.mp3": "/static/media/clicked.37d4fd3e.mp3",
+    "static/media/result.c1433634.wav": "/static/media/result.c1433634.wav"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b30954ad.js",
+    "static/js/2.a66e4bea.chunk.js",
+    "static/css/main.cfc0aff2.chunk.css",
+    "static/js/main.6d7f62ee.chunk.js"
+  ]
+}
