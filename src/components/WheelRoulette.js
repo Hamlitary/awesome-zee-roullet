@@ -36,7 +36,7 @@ const WheelRoulette = ({
         outerBorderColor="#FFE45F"
         outerBorderWidth="10"
         radiusLineColor="#FFE45F"
-        spinDuration="0.3"
+        spinDuration="0.35"
         fontSize="20"
         onStopSpinning={() => {
           setMustSpinOption(false);

@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from "styled-components";
 import WheelRoulette from './WheelRoulette';
 import { Modal } from "@material-ui/core";
 import { ReactComponent as TempImg } from "../assets/svg/HappyZee.svg";
 import { ReactComponent as DialogImg } from "../assets/svg/Dialog.svg";
 import HappyImg from "../assets/png/HappyZee.png";
+import clicksound from '../assets/wav/clicked.mp3';
+import resultSound from '../assets/wav/result.wav';
 
 const MainContainer = styled.div`
   width: 100%;
@@ -132,17 +134,30 @@ const Main = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedData, setSelectedData] = useState('');
 
+  const openAudio = new Audio(clicksound);
+  const closeAudio = new Audio(resultSound);
+
   const handleSpinClick = () => {
     const newPrizeNumber = Math.floor(Math.random() * 8);
     setPrizeNumber(newPrizeNumber);
     setMustSpinOption(true);
     console.log(prizeNumber);
     console.log(mustSpinOption);
+    openAudio.loop = false;
+    openAudio.play();
   };
   
   const handleClose = () => {
     setModalOpen(false);
   };
+
+  useEffect(() => {
+    if (modalOpen){
+      closeAudio.loop = false;
+      closeAudio.play();
+    }
+  // eslint-disable-next-line
+  },[modalOpen]);
 
     return (
     <MainContainer>
@@ -165,12 +180,12 @@ const Main = () => {
       </PriceNotice>
       <ModalArea open={modalOpen} onClose={handleClose} className="ModalArea">
         <>
-        <img src={HappyImg} />
-        <ModalDialog>
-          <ModalText>{selectedData} !!! </ModalText>
-          <ModalTextSmall>당첨을 축하합니다 !!</ModalTextSmall>
-          <ModalBackImg />
-        </ModalDialog>
+          <img src={HappyImg} />
+          <ModalDialog>
+            <ModalText>{selectedData} !!! </ModalText>
+            <ModalTextSmall>당첨을 축하합니다 !!</ModalTextSmall>
+            <ModalBackImg />
+          </ModalDialog>
         </>
       </ModalArea>
     </MainContainer>
