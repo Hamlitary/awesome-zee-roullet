@@ -1,9 +1,9 @@
-import Wheeltest from './components/Wheeltest';
+import Main from './components/Main';
 import './App.css';
 
 function App() {
   return (
-    <Wheeltest />
+    <Main />
   );
 }
 
