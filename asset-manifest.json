@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/awesome-zee-roullet/static/css/main.d2c18b54.chunk.css",
-    "main.js": "/awesome-zee-roullet/static/js/main.7aff32c8.chunk.js",
-    "main.js.map": "/awesome-zee-roullet/static/js/main.7aff32c8.chunk.js.map",
+    "main.js": "/awesome-zee-roullet/static/js/main.1c63f4d3.chunk.js",
+    "main.js.map": "/awesome-zee-roullet/static/js/main.1c63f4d3.chunk.js.map",
     "runtime-main.js": "/awesome-zee-roullet/static/js/runtime-main.083c5b03.js",
     "runtime-main.js.map": "/awesome-zee-roullet/static/js/runtime-main.083c5b03.js.map",
     "static/js/2.efd3efcd.chunk.js": "/awesome-zee-roullet/static/js/2.efd3efcd.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.083c5b03.js",
     "static/js/2.efd3efcd.chunk.js",
     "static/css/main.d2c18b54.chunk.css",
-    "static/js/main.7aff32c8.chunk.js"
+    "static/js/main.1c63f4d3.chunk.js"
   ]
 }
