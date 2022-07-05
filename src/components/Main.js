@@ -9,6 +9,11 @@ import clicksound from '../assets/wav/clicked.mp3';
 import resultSound from '../assets/wav/result.wav';
 
 const MainContainer = styled.div`
+  width: 100vw;
+  height: 100vh;
+`;
+
+const ContentsContainer = styled.div`
   width: 100%;
   height: 100vh;
   display: grid;
@@ -22,10 +27,40 @@ const HeaderContainer = styled.div`
   display: grid;
   overflow: hidden;
   font-family: "Jua";
-  font-size: 50px;
+  font-size: 55px;
   color: #FF6C6C;
   grid-template-rows: 80px 200px;
   justify-items: center;
+  -webkit-text-stroke: 2px #FFE45F;
+`;
+
+const LeftAgroArea = styled.div`
+  width: 25vw;
+  height: 70vh;
+  z-index: 3;
+  min-width: 300px;
+  overflow: hidden;
+  position: absolute;
+  padding-top: 30vh;
+  padding-left: 5vw;
+  font-family: "Jua";
+  font-size: 60px;
+  color: #FFE45F;
+  -webkit-text-stroke: 2px red;
+`;
+
+const RightClickInfoArea = styled.div`
+  width: 33vw;
+  height: 25vh;
+  z-index: 3;
+  min-width: 350px;
+  overflow: hidden;
+  position: absolute;
+  padding-top: 75vh;
+  padding-left: 62vw;
+  font-family: "Jua";
+  font-size: 40px;
+  color: #FF6C6C;
 `;
 
 const RotatingTextAnimation = keyframes`
@@ -77,6 +112,12 @@ const ClickButton = styled.button`
   animation: ${BlinkAnimation} 1s linear infinite;
 `;
 
+const LeftAgroText = styled.div`
+  width: 100%;
+  white-space: pre-line;
+  animation: ${BlinkAnimation} 2s linear infinite;
+`;
+
 const ModalArea = styled(Modal)`
   width: 100%;
   height: 100vh;
@@ -86,7 +127,7 @@ const ModalArea = styled(Modal)`
 `;
 
 const ModalDialog = styled.div`
-  width: 400px;
+  width: 30vw;
   height: 250px;
   display: flex;
   position:relative;
@@ -161,33 +202,41 @@ const Main = () => {
 
     return (
     <MainContainer>
-      <HeaderContainer>
-        <NoticeArea>★ 행운의 지 뽑기 ! ★</NoticeArea>
-        <RotateImg />
-      </HeaderContainer>
-      <WheelRoulette
-        setModalOpen={setModalOpen}
-        setMustSpinOption={setMustSpinOption}
-        mustSpinOption={mustSpinOption}
-        prizeNumber={prizeNumber}
-        setSelectedData={setSelectedData}
-      />
-      <ClickButton onClick={handleSpinClick} >SPIN</ClickButton>
-      <PriceNotice>
-        <div>1000원 = 1회</div>
-        <div>3000원 = 4회</div>
-        <div>5000원 = 7회</div>
-      </PriceNotice>
-      <ModalArea open={modalOpen} onClose={handleClose} className="ModalArea">
-        <>
-          <img src={HappyImg} />
-          <ModalDialog>
-            <ModalText>{selectedData} !!! </ModalText>
-            <ModalTextSmall>당첨을 축하합니다 !!</ModalTextSmall>
-            <ModalBackImg />
-          </ModalDialog>
-        </>
-      </ModalArea>
+      <LeftAgroArea>
+        <LeftAgroText>오직 뽑기로만!! 만날 수 있는 스티커!! 6종을 뽑아 보세요!!</LeftAgroText>
+      </LeftAgroArea>
+      <RightClickInfoArea>
+        <LeftAgroText>☜ SPIN을 터치해서 뽑기 !</LeftAgroText>
+      </RightClickInfoArea>
+      <ContentsContainer>
+        <HeaderContainer>
+          <NoticeArea>★ 행운의 지 뽑기 ! ★</NoticeArea>
+          <RotateImg />
+        </HeaderContainer>
+        <WheelRoulette
+          setModalOpen={setModalOpen}
+          setMustSpinOption={setMustSpinOption}
+          mustSpinOption={mustSpinOption}
+          prizeNumber={prizeNumber}
+          setSelectedData={setSelectedData}
+        />
+        <ClickButton onClick={handleSpinClick} >SPIN</ClickButton>
+        <PriceNotice>
+          <div>1000원 = 1회</div>
+          <div>3000원 = 4회</div>
+          <div>5000원 = 7회</div>
+        </PriceNotice>
+        <ModalArea open={modalOpen} onClose={handleClose} className="ModalArea">
+          <>
+            <img src={HappyImg} />
+            <ModalDialog>
+              <ModalText>{selectedData} !!! </ModalText>
+              <ModalTextSmall>당첨을 축하합니다 !!</ModalTextSmall>
+              <ModalBackImg />
+            </ModalDialog>
+          </>
+        </ModalArea>
+      </ContentsContainer>
     </MainContainer>
     );
 }
