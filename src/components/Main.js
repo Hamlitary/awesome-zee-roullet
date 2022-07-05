@@ -8,6 +8,23 @@ import HappyImg from "../assets/png/HappyZee.png";
 import clicksound from '../assets/wav/clicked.mp3';
 import resultSound from '../assets/wav/result.wav';
 
+const BounceAnimation = keyframes`
+  0% { 
+    opacity: 0; 
+    transform: scale(.3);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
+
 const MainContainer = styled.div`
   width: 100vw;
   height: 100vh;
@@ -46,7 +63,22 @@ const LeftAgroArea = styled.div`
   font-family: "Jua";
   font-size: 60px;
   color: #FFE45F;
-  -webkit-text-stroke: 2px red;
+  -webkit-text-stroke: 2px #FF6C6C;
+`;
+
+const RightAgroArea = styled.div`
+  width: 25vw;
+  height: 70vh;
+  z-index: 3;
+  min-width: 300px;
+  overflow: hidden;
+  position: absolute;
+  padding-top: 30vh;
+  padding-left: 70vw;
+  font-family: "Jua";
+  font-size: 85px;
+  color: #FF6C6C;
+  -webkit-text-stroke: 2px #FFE45F;
 `;
 
 const RightClickInfoArea = styled.div`
@@ -116,6 +148,38 @@ const LeftAgroText = styled.div`
   width: 100%;
   white-space: pre-line;
   animation: ${BlinkAnimation} 2s linear infinite;
+`;
+
+const RightAgroText = styled.div`
+  width: 100%;
+  white-space: pre-line;
+  animation: ${BounceAnimation} 2s linear infinite;
+`;
+
+const MachamNae = styled.div`
+  width: 180px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 90px/ 30px;
+  position: absolute;
+  background-color: red;
+  z-index: 5;
+  margin-top: 18vh;
+  transform: rotate(25deg);
+  margin-left: 58vw;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+`;
+
+const MachamNaeText = styled.div`
+  width: 100%;
+  font-family: "Jua";
+  font-size: 30px;
+  white-space: pre-line;
+  padding-top: 10px;
+  animation: ${BlinkAnimation} 0.5s linear infinite;
 `;
 
 const ModalArea = styled(Modal)`
@@ -203,8 +267,14 @@ const Main = () => {
     return (
     <MainContainer>
       <LeftAgroArea>
-        <LeftAgroText>오직 뽑기로만!! 만날 수 있는 스티커!! 6종을 뽑아 보세요!!</LeftAgroText>
+        <LeftAgroText>뽑기로만 만날 수 있는 스티커!! 6종을 뽑아 보세요!!</LeftAgroText>
       </LeftAgroArea>
+      <MachamNae>
+        <MachamNaeText>마참내</MachamNaeText>
+      </MachamNae>
+      <RightAgroArea>
+        <RightAgroText>★ 지 !★ 뽑기 !!!</RightAgroText>
+      </RightAgroArea>
       <RightClickInfoArea>
         <LeftAgroText>☜ SPIN을 터치해서 뽑기 !</LeftAgroText>
       </RightClickInfoArea>
