@@ -191,7 +191,7 @@ const ModalArea = styled(Modal)`
 `;
 
 const ModalDialog = styled.div`
-  width: 30vw;
+  width: 31vw;
   height: 250px;
   display: flex;
   position:relative;
@@ -232,6 +232,17 @@ const PriceNotice = styled.div`
   text-align: center;
 `;
 
+const TransparentClose = styled.button`
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  margin-left: 550px;
+  margin-top: -200px;
+  z-index: 1;
+  cursor: pointer;
+`;
 
 const Main = () => {
   const [mustSpinOption, setMustSpinOption] = useState(false);
@@ -246,8 +257,8 @@ const Main = () => {
     const newPrizeNumber = Math.floor(Math.random() * 8);
     setPrizeNumber(newPrizeNumber);
     setMustSpinOption(true);
-    console.log(prizeNumber);
-    console.log(mustSpinOption);
+    //console.log(prizeNumber);
+    //console.log(mustSpinOption);
     openAudio.loop = false;
     openAudio.play();
   };
@@ -258,9 +269,10 @@ const Main = () => {
 
   useEffect(() => {
     if (modalOpen){
+      closeAudio.load();
       closeAudio.loop = false;
       closeAudio.play();
-    }
+    } else closeAudio.pause();
   // eslint-disable-next-line
   },[modalOpen]);
 
@@ -298,7 +310,8 @@ const Main = () => {
         </PriceNotice>
         <ModalArea open={modalOpen} onClose={handleClose} className="ModalArea">
           <>
-            <img src={HappyImg} />
+            <TransparentClose onClick={handleClose} />
+            <img src={HappyImg} alt="HappyZee"/>
             <ModalDialog>
               <ModalText>{selectedData} !!! </ModalText>
               <ModalTextSmall>당첨을 축하합니다 !!</ModalTextSmall>

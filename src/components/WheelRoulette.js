@@ -49,7 +49,6 @@ const WheelRoulette = ({
 }
 
 WheelRoulette.propTypes = {
-  handleSpinClick: PropTypes.func.isRequired,
   setModalOpen: PropTypes.func.isRequired,
   setSelectedData: PropTypes.func,
   setMustSpin: PropTypes.bool,
