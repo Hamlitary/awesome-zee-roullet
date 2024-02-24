@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import { Wheel } from 'react-custom-roulette';
 
 const data = [
-  { option: '1등' },
-  { option: '2등' },
-  { option: '3등' },
-  { option: '4등' },
-  { option: '5등' },
+  { option: '엽서 2장' },
+  { option: '엽서 3장' },
+  { option: '스티커 1장' },
+  { option: '스티커 2장' },
+  { option: '포스터 1장' },
+  { option: '책갈피 1개' },
+  { option: '스티커 1장' },
+  { option: '엽서 2장'},
+  { option: '책갈피 2개' },
 ]
 
 const WheelRoulette = ({

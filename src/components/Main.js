@@ -279,7 +279,7 @@ const Main = () => {
     return (
     <MainContainer>
       <LeftAgroArea>
-        <LeftAgroText>뽑기 1회 천원!!</LeftAgroText>
+        <LeftAgroText>뽑기 1회 2000원!!</LeftAgroText>
       </LeftAgroArea>
       <MachamNae>
         <MachamNaeText>마참내</MachamNaeText>
@@ -304,13 +304,8 @@ const Main = () => {
         />
         <ClickButton onClick={handleSpinClick} >SPIN</ClickButton>
         <PriceNotice>
-          <div>1000원 = 1회</div>
-          <div>1등 = 랜덤팩</div>
-          <div>2등 = 그립톡</div>
-          <div>3등 = 키링</div>
-          <div>4등 = 포스터</div>
-          <div>5등 = 스티커</div>
-          <div>6등 = 엽서</div>
+          <div>2000원 = 1회</div>
+          <div>5000원 = 3회</div>
         </PriceNotice>
         <ModalArea open={modalOpen} onClose={handleClose} className="ModalArea">
           <>
