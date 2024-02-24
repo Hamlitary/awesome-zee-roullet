@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/awesome-zee-roullet/static/css/main.6d0d7885.css",
-    "main.js": "/awesome-zee-roullet/static/js/main.7ca075e8.js",
+    "main.js": "/awesome-zee-roullet/static/js/main.6f0aa878.js",
     "static/js/787.04c49bd2.chunk.js": "/awesome-zee-roullet/static/js/787.04c49bd2.chunk.js",
     "static/media/Jua-Regular.ttf": "/awesome-zee-roullet/static/media/Jua-Regular.bb8909a47f60980f5988.ttf",
     "static/media/result.wav": "/awesome-zee-roullet/static/media/result.c1433634a5efd4481b9c.wav",
@@ -10,11 +10,11 @@
     "static/media/Dialog.svg": "/awesome-zee-roullet/static/media/Dialog.d68ac5b49f2df7338c39ad47aa6d746a.svg",
     "index.html": "/awesome-zee-roullet/index.html",
     "main.6d0d7885.css.map": "/awesome-zee-roullet/static/css/main.6d0d7885.css.map",
-    "main.7ca075e8.js.map": "/awesome-zee-roullet/static/js/main.7ca075e8.js.map",
+    "main.6f0aa878.js.map": "/awesome-zee-roullet/static/js/main.6f0aa878.js.map",
     "787.04c49bd2.chunk.js.map": "/awesome-zee-roullet/static/js/787.04c49bd2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6d0d7885.css",
-    "static/js/main.7ca075e8.js"
+    "static/js/main.6f0aa878.js"
   ]
 }
